@@ -16,15 +16,15 @@ public class Comp {
 		// int choice = scanner.nextInt();
 		switch (choice) {
 		case 1:
-			return new Compare.CaloriesAsc();
+			return new CaloriesLTComparator();
 		case 2:
-			return new Compare.CaloriesDesc();
+			return new CaloriesGTComparator();
 		case 3:
-			return new Compare.PriceAsc();
+			return new PriceLTComparator();
 		case 4:
-			return new Compare.PriceDesc();
+			return new PriceGTComparator();
 	    default:
-	    	return new Compare.PriceAsc();
+	    	return new PriceGTComparator();
 
 		}
 	}
