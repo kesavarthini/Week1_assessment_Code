@@ -14,7 +14,7 @@ import java.util.Iterator;
 class Restaurant {
 	public static void main(String args[]) {
 		Scanner in = new Scanner(System.in);
-		Set<Dish> dishes = new TreeSet<>();
+		List<Dish> dishes = new ArrayList();
 		dishes.add(new Dish(5, "Neer-Dosa", 50.00, 100));
 		dishes.add(new Dish(2, "Idli-Vada", 40.00, 200));
 		dishes.add(new Dish(4, "Roti-Curry", 100.00, 250));
@@ -30,10 +30,10 @@ class Restaurant {
 		System.out.println("  ===============================================  ");
 
 		int choice = in.nextInt();
-		List<Dish> list = new ArrayList<Dish>(dishes);
-		Collections.sort(list, Comp.getComparator(choice));
+		
+		Collections.sort(dishes, Comp.getComparator(choice));
 		System.out.println("=================Please select the Dish Id and hit enter===============================");
-		for (Dish l : list) {
+		for (Dish l : dishes) {
 			System.out.println(l);
 			System.out.println();
 		}
